@@ -1,0 +1,54 @@
+{
+  "name": "@alexd10s/openclaw-strava",
+  "version": "0.1.0",
+  "description": "Community Strava plugin for OpenClaw",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "vitest run --config vitest.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "0.34.49"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "openclaw": "2026.3.31",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.31"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "npmSpec": "@alexd10s/openclaw-strava",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.3.31"
+    },
+    "compat": {
+      "pluginApi": ">=2026.3.31",
+      "minGatewayVersion": "2026.3.31"
+    },
+    "build": {
+      "openclawVersion": "2026.3.31",
+      "pluginSdkVersion": "2026.3.31"
+    }
+  }
+}
