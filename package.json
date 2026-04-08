@@ -1,6 +1,6 @@
 {
   "name": "@alexd10s/openclaw-strava",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Community Strava plugin for OpenClaw",
   "type": "module",
   "files": [
